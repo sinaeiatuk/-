@@ -3,125 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مراجعات الطالب "المصحصح"</title>
+    <title>مراجعات الأسطورة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a1a;
-            color: #fff;
+            font-family: 'Cairo', sans-serif;
             margin: 0;
             padding: 0;
+            min-height: 100vh;
+            /* خلفية متحركة عشان تبهرهم */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-        }
-
-        header {
-            background: linear-gradient(90deg, #ff8c00, #ff0080);
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            margin-top: 10px;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 50px 20px;
-            max-width: 1200px;
-        }
-
-        .card {
-            background: #2d2d2d;
-            border-radius: 15px;
-            width: 250px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-            text-decoration: none;
             color: white;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: #ff8c00;
-            box-shadow: 0 10px 20px rgba(255, 140, 0, 0.2);
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        .card h2 {
-            margin: 10px 0 0;
-            font-size: 1.8rem;
+        header {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* الحاوية بنظام الشبكة عشان يصيرون جنب بعض غصب */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1000px;
+            padding: 20px;
+        }
+
+        /* تصميم البطاقة الزجاجي */
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تأثير لما تحط الماوس */
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: #fff;
         }
 
         .icon {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(0,0,0,0.2);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-top: 10px;
         }
 
         footer {
             margin-top: auto;
             padding: 20px;
-            color: #888;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>📚 مراجعات النكبة</h1>
-        <p>اضغط على المادة وحمل ملف الpdf اذا ذاكرت اصلا!</p>
+        <h1>🔥 مراجعات النهائي</h1>
+        <p>شغل متعوب عليه (من الذكاء الاصطناعي طبعاً)</p>
     </header>
 
-    <div class="container">
+    <div class="grid-container">
         <a href="https://drive.google.com/file/d/1f_nnQY6V5N0C7rObGn3cyCJFV2NtdmJP/view?usp=drivesdk" class="card" target="_blank">
             <div class="icon">📐</div>
             <h2>رياضيات</h2>
+            <span class="badge">PDF جاهز</span>
         </a>
 
         <a href="https://drive.google.com/file/d/1GnUKPTbYX6w2nk7vLgkuFdmBKYusb0nd/view?usp=drivesdk" class="card" target="_blank">
             <div class="icon">🧬</div>
             <h2>أحياء</h2>
+            <span class="badge">اضغط للمراجعة</span>
         </a>
 
         <a href="https://drive.google.com/file/d/1Cpik9-_ZbT295FdG0q1aZyV3TYYpPRTO/view?usp=drivesdk" class="card" target="_blank">
             <div class="icon">🧪</div>
             <h2>كيمياء</h2>
+            <span class="badge">تفاعلات ووجع راس</span>
         </a>
 
         <a href="https://drive.google.com/file/d/1c3mByuIr8VXF-uxAwnvEeqLB6bhruRqq/view?usp=drivesdk" class="card" target="_blank">
             <div class="icon">⚡</div>
             <h2>فيزياء</h2>
+            <span class="badge">نيوتن ينتظرك</span>
         </a>
 
         <a href="https://drive.google.com/file/d/1DMoKGBuTx-V9tP1MqS6-vyK6B8s6vSRS/view?usp=drivesdk" class="card" target="_blank">
             <div class="icon">🅰️</div>
             <h2>إنجليزي</h2>
+            <span class="badge">Easy Peasy</span>
         </a>
     </div>
 
     <footer>
-        تصميم: المالك حبيبنا "أبو 3 ريال"
+        تصميم: (حط اسمك هنا يا نصاب) &copy; 2024
     </footer>
 
 </body>
