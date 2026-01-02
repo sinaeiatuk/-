@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مراجعات الطالب "المفلس"</title>
+    <style>
+        /* شوف التنسيق يا فنان، مو مثل تصويرك المعوق */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a; /* لون غامق عشان نفسيتك */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff8c00, #ff0080);
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+            max-width: 1200px;
+        }
+
+        /* البطاقات حقت المواد */
+        .card {
+            background: #2d2d2d;
+            border-radius: 15px;
+            width: 250px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none; /* عشان الرابط ما يصير تحته خط */
+            color: white;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #ff8c00;
+            box-shadow: 0 10px 20px rgba(255, 140, 0, 0.2);
+        }
+
+        .card h2 {
+            margin: 10px 0 0;
+            font-size: 1.8rem;
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 مراجعات النكبة</h1>
+        <p>اضغط على المادة وحمل الـ PDF (إذا ذاكرت أصلاً)</p>
+    </header>
+
+    <div class="container">
+        <a href="math.pdf" class="card" target="_blank">
+            <div class="icon">📐</div>
+            <h2>رياضيات</h2>
+        </a>
+
+        <a href="biology.pdf" class="card" target="_blank">
+            <div class="icon">🧬</div>
+            <h2>أحياء</h2>
+        </a>
+
+        <a href="chemistry.pdf" class="card" target="_blank">
+            <div class="icon">🧪</div>
+            <h2>كيمياء</h2>
+        </a>
+
+        <a href="physics.pdf" class="card" target="_blank">
+            <div class="icon">⚡</div>
+            <h2>فيزياء</h2>
+        </a>
+
+        <a href="english.pdf" class="card" target="_blank">
+            <div class="icon">🅰️</div>
+            <h2>إنجليزي</h2>
+        </a>
+    </div>
+
+    <footer>
+        تصميم: (أنا) | المالك: طالب مفلس برصيد 3 ريال
+    </footer>
+
+</body>
+</html>
